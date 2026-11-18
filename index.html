@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sai Teja — Personal Portfolio</title>
+  <meta name="description" content="Sai Teja, B.Tech CSE student at Mahindra University. Developer, AI enthusiast and data explorer. Projects, skills and contact.">
+  <meta name="theme-color" content="#FF6500">
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+  <script>try{if(sessionStorage.getItem("navT")==="1"){sessionStorage.removeItem("navT");document.documentElement.classList.add("page-enter");}}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&family=Unbounded:wght@700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 (grid utilities, modal, buttons base, form layout) + Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom CSS creates the identity; it loads AFTER Bootstrap so it can override it -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div class="splash" id="splash" role="status" aria-live="polite" aria-label="Loading portfolio">
+  <div class="splash__grid" aria-hidden="true">
+    <span class="v" style="left:6%"></span><span class="v" style="left:22%"></span><span class="v" style="left:55%"></span><span class="v" style="left:76%"></span><span class="v" style="left:94%"></span>
+    <span class="h" style="top:12%"></span><span class="h" style="top:58%"></span><span class="h" style="top:86%"></span>
+  </div>
+  <div class="splash__box">
+    <p class="splash__status" id="splashStatus">&gt; INITIALIZING...<span class="blink">_</span></p>
+    <p class="splash__hi" id="splashHi" aria-label="Hi, I'm Sai Teja">&#8203;<span class="cur" aria-hidden="true"></span></p>
+    <p class="splash__welcome" id="splashWelcome">WELCOME TO MY PORTFOLIO</p>
+    <div class="splash__bar" aria-hidden="true"><div class="track"><div class="fill" id="splashFill"></div></div><span class="pct" id="splashPct">0%</span></div>
+  </div>
+  <span class="splash__skip" aria-hidden="true">CLICK TO SKIP →</span>
+  <div class="splash__panels" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="page-transition" id="pageTransition" aria-hidden="true">SAI TEJA</div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Sai Teja Portfolio, home">
+    <img class="brand__mark" src="assets/icons/logo.svg" alt="" width="38" height="38">
+    <span>SAI TEJA<small>/ PORTFOLIO</small></span>
+  </a>
+  <nav class="nav-main" aria-label="Primary">
+    <ul>
+      <li class="d-flex"><a href="index.html" data-nav>Home</a></li>
+      <li class="d-flex"><a href="work.html" data-nav>Work</a></li>
+      <li class="d-flex"><a href="contact.html" data-nav>Contact</a></li>
+    </ul>
+  </nav>
+  <div class="header-right">
+    <div class="avail-pill"><span class="pulse-dot" aria-hidden="true"></span>Available for internships</div>
+    <button class="menu-btn" id="menuOpen" type="button" aria-expanded="false" aria-controls="menuOverlay" aria-label="Open menu">
+      <span class="menu-btn__text">[ MENU ]</span>
+      <span class="menu-btn__icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<div class="menu-overlay" id="menuOverlay" aria-hidden="true" role="dialog" aria-label="Site menu">
+  <div class="menu-overlay__top">
+    <span class="label">SAI TEJA / PORTFOLIO</span>
+    <button class="menu-close" id="menuClose" type="button" aria-label="Close menu">CLOSE ✕</button>
+  </div>
+  <nav aria-label="Full-screen menu">
+    <ul>
+      <li><a href="index.html" data-nav><span>01</span>Home</a></li>
+      <li><a href="work.html" data-nav><span>02</span>Work</a></li>
+      <li><a href="contact.html" data-nav><span>03</span>Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-overlay__foot">
+    <a href="https://github.com/Tejaak" target="_blank" rel="noopener">GITHUB ↗</a>
+    <a href="https://www.linkedin.com/in/agirishati-sai-teja-38a89334b" target="_blank" rel="noopener">LINKEDIN ↗</a>
+    <a href="mailto:sai.teja@mahindrauniversity.edu.in">EMAIL ↗</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__text">
+      <div class="hero__eyebrow label">
+        <span class="label--slash">Hello, I'm</span>
+        <span>2026 ■</span>
+      </div>
+      <div>
+        <h1 class="display display--xl hero__title" id="hero-title" aria-label="Sai Teja">
+          <span class="row-line"><span style="--d:.15s">SAI</span></span>
+          <span class="row-line"><span style="--d:.3s">TEJA<span class="dot">.</span></span></span>
+        </h1>
+        <p class="hero__role mt-3">Computer Science Student</p>
+        <p class="label mt-2">Developer • AI • Data</p>
+      </div>
+      <p class="hero__stmt" data-reveal="up">I build digital experiences,<br>experiment with technology,<br>and turn ideas into working projects.</p>
+      <div class="hero__cta" data-reveal="up" data-delay="1">
+        <a class="btn-sharp magnetic" href="work.html">Explore my work <span class="arr">→</span></a>
+        <a class="btn-sharp btn-sharp--ghost magnetic" href="contact.html">Contact me <span class="arr">→</span></a>
+      </div>
+    </div>
+    <aside class="hero__photo" aria-label="Portrait of Sai Teja">
+      <span class="corner corner--tl" aria-hidden="true"></span>
+      <span class="corner corner--br" aria-hidden="true"></span>
+      <span class="photo-tag" aria-hidden="true">&lt;/&gt;</span>
+      <span class="photo-year" aria-hidden="true">2024 — 2028</span>
+      <div class="photo-frame" data-reveal="scale">
+        <img src="assets/images/photo.png" alt="Sai Teja, Computer Science student, looking up and to the side" width="600" height="720" fetchpriority="high">
+      </div>
+    </aside>
+  </section>
+
+  <!-- ============ ABOUT + BACKGROUND ============ -->
+  <section class="about" id="about" aria-labelledby="about-title">
+    <article class="about__main">
+      <p class="section-tag">// About me</p>
+      <h2 class="display display--lg" id="about-title" data-reveal="up">I build<br>things<br>with code<span class="dot">.</span></h2>
+      <p data-reveal="up" data-delay="1">I'm a Computer Science Engineering student at Mahindra University, Hyderabad, interested in software development, AI and data. I like turning an idea into something that actually runs.</p>
+      <p data-reveal="up" data-delay="2">Most of what I learn comes from building: full-stack web apps, a Linux monitoring tool, a machine learning model and a business dashboard, each in a different corner of tech.</p>
+      <ul class="chips" aria-label="Interests">
+        <li class="chip">Software development</li><li class="chip">Web development</li><li class="chip">Artificial Intelligence</li>
+        <li class="chip">Data</li><li class="chip">Problem solving</li><li class="chip">Practical projects</li>
+      </ul>
+    </article>
+    <aside class="background" aria-labelledby="bg-title">
+      <p class="section-tag" id="bg-title">Background / Education</p>
+      <ul class="edu-list">
+        <li data-reveal="up"><span class="ico"><i class="bi bi-mortarboard"></i></span><div><strong>B.Tech Computer Science Engineering</strong><span>2024 – 2028 · Batch of 2028</span></div></li>
+        <li data-reveal="up" data-delay="1"><span class="ico"><i class="bi bi-geo-alt"></i></span><div><strong>Mahindra University</strong><span>Hyderabad, India</span></div></li>
+        <li data-reveal="up" data-delay="2"><span class="ico"><i class="bi bi-bullseye"></i></span><div><strong>Focus areas</strong><span>Software · AI · Data</span></div></li>
+        <li data-reveal="up" data-delay="3"><span class="ico"><i class="bi bi-heart"></i></span><div><strong>Outside class</strong><span>Volleyball · Exploring ideas</span></div></li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- ============ BEYOND CODE ============ -->
+  <section class="beyond" aria-labelledby="beyond-title">
+    <div class="beyond__title"><h2 class="display display--md" id="beyond-title">Beyond<br>code<span class="dot">.</span></h2></div>
+    <div class="beyond__tiles">
+      <article class="tile-b" tabindex="0"><i class="bi bi-dribbble" aria-hidden="true"></i><div><h3>Volleyball</h3><p>Teamwork, timing and quick decisions on the court.</p></div></article>
+      <article class="tile-b" tabindex="0"><i class="bi bi-lightbulb" aria-hidden="true"></i><div><h3>Exploring ideas</h3><p>Always curious about how things work and what could be built next.</p></div></article>
+      <article class="tile-b" tabindex="0"><i class="bi bi-tools" aria-hidden="true"></i><div><h3>Building side projects</h3><p>Small experiments that teach more than any lecture.</p></div></article>
+      <article class="tile-b" tabindex="0"><i class="bi bi-cpu" aria-hidden="true"></i><div><h3>Learning new tech</h3><p>Picking up new tools and frameworks as they come.</p></div></article>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED WORK ============ -->
+  <section class="block block--white" aria-labelledby="featured-title">
+    <div class="section-head">
+      <h2 class="display display--lg" id="featured-title">Featured<br>works<span class="dot">.</span></h2>
+      <p class="label label--slash">Selected projects</p>
+    </div>
+    <div class="proj-grid proj-grid--3">
+      <a class="proj-card" href="work.html#project-shopez" data-reveal="up">
+        <div class="proj-card__top"><span>01</span><span class="proj-card__arrow" aria-hidden="true">↗</span></div>
+        <h3 class="proj-card__title">ShopEZ</h3>
+        <p class="proj-card__cat">MERN E-Commerce Application</p>
+        <p class="proj-card__desc">Full-stack store with authentication, product management and cloud image storage.</p>
+        <p class="proj-card__meta">CASE STUDY →</p>
+        <ul class="tags"><li class="tag">React</li><li class="tag">Node</li><li class="tag">MongoDB</li></ul>
+        <span class="proj-card__img" aria-hidden="true"><img src="assets/projects/shopez.svg" alt="" loading="lazy" width="400" height="260"></span>
+      </a>
+      <a class="proj-card" href="work.html#project-syswatch" data-reveal="up" data-delay="1">
+        <div class="proj-card__top"><span>02</span><span class="proj-card__arrow" aria-hidden="true">↗</span></div>
+        <h3 class="proj-card__title">SysWatch</h3>
+        <p class="proj-card__cat">Linux System Monitoring</p>
+        <p class="proj-card__desc">Python tool that tracks CPU, memory and disk health with real-time alerts.</p>
+        <p class="proj-card__meta">CASE STUDY →</p>
+        <ul class="tags"><li class="tag">Python</li><li class="tag">Linux</li><li class="tag">Bash</li></ul>
+        <span class="proj-card__img" aria-hidden="true"><img src="assets/projects/syswatch.svg" alt="" loading="lazy" width="400" height="260"></span>
+      </a>
+      <a class="proj-card" href="work.html#project-segmentation" data-reveal="up" data-delay="2">
+        <div class="proj-card__top"><span>03</span><span class="proj-card__arrow" aria-hidden="true">↗</span></div>
+        <h3 class="proj-card__title">Customer Segmentation</h3>
+        <p class="proj-card__cat">Machine Learning</p>
+        <p class="proj-card__desc">Clustering customers to find insights and improve targeting.</p>
+        <p class="proj-card__meta">CASE STUDY →</p>
+        <ul class="tags"><li class="tag">Python</li><li class="tag">Pandas</li><li class="tag">Sklearn</li></ul>
+        <span class="proj-card__img" aria-hidden="true"><img src="assets/projects/segmentation.svg" alt="" loading="lazy" width="400" height="260"></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ QUICK METRICS (only values backed by the Work page) ============ -->
+  <section class="metrics" aria-label="Quick facts">
+    <div class="metric"><span class="metric__num"><span data-count="4" data-pad="2">00</span></span><span class="metric__lbl">Projects</span></div>
+    <div class="metric"><span class="metric__num"><span data-count="10">0</span><span class="plus">+</span></span><span class="metric__lbl">Technologies</span></div>
+    <div class="metric"><span class="metric__num"><span data-count="1" data-pad="2">00</span></span><span class="metric__lbl">Internship</span></div>
+    <div class="metric"><span class="metric__num"><span data-count="2" data-pad="2">00</span></span><span class="metric__lbl">Hackathons</span></div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta-strip" aria-labelledby="cta-title">
+    <div>
+      <p class="label label--slash">Next step</p>
+      <h2 class="display display--lg mt-2" id="cta-title" data-reveal="up">Have an idea?<br><span class="hl">Let's build it.</span></h2>
+    </div>
+    <div class="actions">
+      <a class="btn-sharp magnetic" href="work.html">Explore my work <span class="arr">→</span></a>
+      <a class="btn-sharp btn-sharp--ghost magnetic" href="contact.html">Let's connect <span class="arr">→</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <p class="display display--lg" aria-label="Sai Teja">SAI<br>TEJA<span class="dot">.</span></p>
+    <ul class="footer-roles">
+      <li>DEVELOPER</li><li>AI ENTHUSIAST</li><li>DATA EXPLORER</li>
+    </ul>
+    <nav aria-label="Footer">
+      <ul class="footer-links flex-column flex-sm-row">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="work.html">WORK</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="https://github.com/Tejaak" target="_blank" rel="noopener">GITHUB</a></li>
+        <li><a href="https://www.linkedin.com/in/agirishati-sai-teja-38a89334b" target="_blank" rel="noopener">LINKEDIN</a></li>
+        <li><a href="mailto:sai.teja@mahindrauniversity.edu.in">EMAIL</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Sai Teja</span>
+    <span>&lt;/&gt; Built with HTML • CSS • JavaScript</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

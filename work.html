@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work — Sai Teja Portfolio</title>
+  <meta name="description" content="Projects, skills, experience, achievements and certifications of Sai Teja.">
+  <meta name="theme-color" content="#FF6500">
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+  <script>try{if(sessionStorage.getItem("navT")==="1"){sessionStorage.removeItem("navT");document.documentElement.classList.add("page-enter");}}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&family=Unbounded:wght@700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 (grid utilities, modal, buttons base, form layout) + Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom CSS creates the identity; it loads AFTER Bootstrap so it can override it -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="page-transition" id="pageTransition" aria-hidden="true">SAI TEJA</div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Sai Teja Portfolio, home">
+    <img class="brand__mark" src="assets/icons/logo.svg" alt="" width="38" height="38">
+    <span>SAI TEJA<small>/ PORTFOLIO</small></span>
+  </a>
+  <nav class="nav-main" aria-label="Primary">
+    <ul>
+      <li class="d-flex"><a href="index.html" data-nav>Home</a></li>
+      <li class="d-flex"><a href="work.html" data-nav>Work</a></li>
+      <li class="d-flex"><a href="contact.html" data-nav>Contact</a></li>
+    </ul>
+  </nav>
+  <div class="header-right">
+    <div class="avail-pill"><span class="pulse-dot" aria-hidden="true"></span>Available for internships</div>
+    <button class="menu-btn" id="menuOpen" type="button" aria-expanded="false" aria-controls="menuOverlay" aria-label="Open menu">
+      <span class="menu-btn__text">[ MENU ]</span>
+      <span class="menu-btn__icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<div class="menu-overlay" id="menuOverlay" aria-hidden="true" role="dialog" aria-label="Site menu">
+  <div class="menu-overlay__top">
+    <span class="label">SAI TEJA / PORTFOLIO</span>
+    <button class="menu-close" id="menuClose" type="button" aria-label="Close menu">CLOSE ✕</button>
+  </div>
+  <nav aria-label="Full-screen menu">
+    <ul>
+      <li><a href="index.html" data-nav><span>01</span>Home</a></li>
+      <li><a href="work.html" data-nav><span>02</span>Work</a></li>
+      <li><a href="contact.html" data-nav><span>03</span>Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-overlay__foot">
+    <a href="https://github.com/Tejaak" target="_blank" rel="noopener">GITHUB ↗</a>
+    <a href="https://www.linkedin.com/in/agirishati-sai-teja-38a89334b" target="_blank" rel="noopener">LINKEDIN ↗</a>
+    <a href="mailto:sai.teja@mahindrauniversity.edu.in">EMAIL ↗</a>
+  </div>
+</div>
+
+<main id="main">
+  <section class="work-hero" aria-labelledby="work-title">
+    <div>
+      <p class="section-tag">// My work</p>
+      <h1 class="display display--xl mt-3" id="work-title">Projects<span class="dot">.</span></h1>
+    </div>
+    <nav class="anchors" aria-label="On this page">
+      <a href="#projects">PROJECTS</a><a href="#skills">SKILLS</a><a href="#experience">EXPERIENCE</a><a href="#achievements">ACHIEVEMENTS</a>
+    </nav>
+  </section>
+
+  <section id="projects" class="block" aria-label="Projects">
+    <div class="filters" role="group" aria-label="Filter projects by category">
+      <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true"><i class="bi bi-grid-3x3-gap"></i>ALL</button>
+      <button class="filter-btn" type="button" data-filter="web" aria-pressed="false"><i class="bi bi-globe2"></i>WEB</button>
+      <button class="filter-btn" type="button" data-filter="ai" aria-pressed="false"><i class="bi bi-cpu"></i>AI / ML</button>
+      <button class="filter-btn" type="button" data-filter="data" aria-pressed="false"><i class="bi bi-bar-chart"></i>DATA</button>
+      <button class="filter-btn" type="button" data-filter="systems" aria-pressed="false"><i class="bi bi-terminal"></i>SYSTEMS</button>
+      <button class="filter-btn" type="button" data-filter="other" aria-pressed="false"><i class="bi bi-three-dots"></i>OTHER</button>
+    </div>
+    <div class="proj-grid" id="projectGrid">
+      
+      <button class="proj-card" type="button" data-project="shopez" data-cat="web" aria-haspopup="dialog" aria-label="View project: ShopEZ">
+        <span class="proj-card__top"><span>01</span><span class="proj-card__arrow" aria-hidden="true">↗</span></span>
+        <span class="proj-card__title">ShopEZ</span>
+        <span class="proj-card__cat">MERN E-Commerce Application</span>
+        <span class="proj-card__desc">A full-stack e-commerce platform with product management, auth and cloud image storage.</span>
+        <span class="cta-link">View project →</span>
+        <span class="proj-card__meta">OPEN CASE STUDY</span>
+        <span class="tags"><li class="tag">React.js</li><li class="tag">Node.js</li><li class="tag">Express.js</li><li class="tag">MongoDB</li></span>
+        <span class="proj-card__img" aria-hidden="true"><img src="assets/projects/shopez.svg" alt="" loading="lazy" width="400" height="260"></span>
+      </button>
+      
+      <button class="proj-card" type="button" data-project="syswatch" data-cat="systems" aria-haspopup="dialog" aria-label="View project: SysWatch">
+        <span class="proj-card__top"><span>02</span><span class="proj-card__arrow" aria-hidden="true">↗</span></span>
+        <span class="proj-card__title">SysWatch</span>
+        <span class="proj-card__cat">Linux System Monitoring Tool</span>
+        <span class="proj-card__desc">A Python-based tool to monitor CPU, memory, disk and system health with real-time alerts.</span>
+        <span class="cta-link">View project →</span>
+        <span class="proj-card__meta">OPEN CASE STUDY</span>
+        <span class="tags"><li class="tag">Python</li><li class="tag">Linux</li><li class="tag">Bash</li></span>
+        <span class="proj-card__img" aria-hidden="true"><img src="assets/projects/syswatch.svg" alt="" loading="lazy" width="400" height="260"></span>
+      </button>
+      
+      <button class="proj-card" type="button" data-project="segmentation" data-cat="ai" aria-haspopup="dialog" aria-label="View project: Customer Segmentation">
+        <span class="proj-card__top"><span>03</span><span class="proj-card__arrow" aria-hidden="true">↗</span></span>
+        <span class="proj-card__title">Customer Segmentation</span>
+        <span class="proj-card__cat">ML for Customer Insights</span>
+        <span class="proj-card__desc">Segmented customers using clustering to find business insights and improve targeting.</span>
+        <span class="cta-link">View project →</span>
+        <span class="proj-card__meta">OPEN CASE STUDY</span>
+        <span class="tags"><li class="tag">Python</li><li class="tag">Pandas</li><li class="tag">NumPy</li><li class="tag">Scikit-learn</li></span>
+        <span class="proj-card__img" aria-hidden="true"><img src="assets/projects/segmentation.svg" alt="" loading="lazy" width="400" height="260"></span>
+      </button>
+      
+      <button class="proj-card" type="button" data-project="dashboard" data-cat="data" aria-haspopup="dialog" aria-label="View project: Sales & Revenue Dashboard">
+        <span class="proj-card__top"><span>04</span><span class="proj-card__arrow" aria-hidden="true">↗</span></span>
+        <span class="proj-card__title">Sales & Revenue Dashboard</span>
+        <span class="proj-card__cat">Data Analytics with Power BI</span>
+        <span class="proj-card__desc">An interactive dashboard to analyse sales, revenue trends and key business metrics.</span>
+        <span class="cta-link">View project →</span>
+        <span class="proj-card__meta">OPEN CASE STUDY</span>
+        <span class="tags"><li class="tag">Power BI</li><li class="tag">Excel</li><li class="tag">Data Visualization</li></span>
+        <span class="proj-card__img" aria-hidden="true"><img src="assets/projects/dashboard.svg" alt="" loading="lazy" width="400" height="260"></span>
+      </button>
+    </div>
+    <p class="empty-note" id="emptyNote" role="status">// No projects in this category yet. More coming soon.</p>
+  </section>
+
+  <section class="skills" id="skills" aria-labelledby="skills-title">
+    <div class="skills__title">
+      <p class="section-tag">// Skills &amp; tech stack</p>
+      <h2 class="display display--lg" id="skills-title">My<br>stack<span class="dot">.</span></h2>
+    </div>
+    <div class="skills__groups">
+      <div class="skill-group"><h3>PROGRAMMING</h3><ul>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-filetype-py"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">Python<small>Scripting, data work, automation</small></span></li>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-braces"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">C<small>Low-level fundamentals</small></span></li>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-filetype-js"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">JavaScript<small>Interactivity on the web</small></span></li>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-database"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">SQL<small>Querying relational data</small></span></li>
+      </ul></div>
+      <div class="skill-group"><h3>WEB &amp; APPLICATION</h3><ul>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-filetype-html"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">HTML<small>Semantic page structure</small></span></li>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-filetype-css"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">CSS<small>Layout, Grid, Flexbox</small></span></li>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-filetype-js"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">JavaScript<small>DOM and events</small></span></li>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-layers"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">React.js<small>Component-based UI</small></span></li>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-hexagon"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">Node.js<small>JavaScript on the server</small></span></li>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-diagram-3"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">Express.js<small>REST APIs for Node</small></span></li>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-database-fill"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">MongoDB<small>Document database</small></span></li>
+      </ul></div>
+      <div class="skill-group"><h3>DATA &amp; AI</h3><ul>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-table"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">Pandas<small>Data cleaning and analysis</small></span></li>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-grid-3x3"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">NumPy<small>Numerical computing</small></span></li>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-bezier2"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">Scikit-learn<small>Machine learning models</small></span></li>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-bar-chart-fill"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">Power BI<small>Dashboards and reports</small></span></li>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-file-earmark-spreadsheet"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">Excel<small>Spreadsheets and analysis</small></span></li>
+      </ul></div>
+      <div class="skill-group"><h3>TOOLS</h3><ul>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-github"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">GitHub<small>Version control and hosting</small></span></li>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-code-slash"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">VS Code<small>Day-to-day editor</small></span></li>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-send"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">Postman<small>Testing APIs</small></span></li>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-server"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">MySQL<small>Relational database</small></span></li>
+        <li class="skill-tile"><span class="ico" aria-hidden="true"><i class="i-a bi bi-journal-code"></i><i class="i-b bi bi-arrow-up-right"></i></span><span class="txt">Google Colab<small>Notebooks in the cloud</small></span></li>
+      </ul></div>
+    </div>
+  </section>
+
+  <section class="journey" id="experience" aria-label="Experience and achievements">
+    <div class="journey__col">
+      <p class="section-tag">// Experience</p>
+      <h2 class="display display--lg">Journey<span class="dot">.</span></h2>
+      <div class="timeline">
+        <div class="t-item">
+          <span class="t-year">2026</span>
+          <button class="t-head" type="button" aria-expanded="false">Full Stack Development Intern <span class="plus" aria-hidden="true">+</span></button>
+          <p class="t-sub">SmartBridge · Virtual Internship</p>
+          <div class="t-body"><div><ul><li>Built ShopEZ using the MERN stack.</li><li>Implemented authentication, product and cloud storage features.</li></ul></div></div>
+        </div>
+        <div class="t-item">
+          <span class="t-year">2026</span>
+          <button class="t-head" type="button" aria-expanded="false">Hackathons &amp; Competitions <span class="plus" aria-hidden="true">+</span></button>
+          <div class="t-body"><div><ul><li>Participated in iQOO Hackathon 2026 as Team Lead (team Delulu).</li><li>Working on Smart India Hackathon (SIH) 2026.</li></ul></div></div>
+        </div>
+        <div class="t-item">
+          <span class="t-year">2025 – 2026</span>
+          <button class="t-head" type="button" aria-expanded="false">Academic &amp; Project Work <span class="plus" aria-hidden="true">+</span></button>
+          <div class="t-body"><div><ul><li>Built multiple academic and personal projects in web, AI and data analytics.</li><li>Gained practical experience in full-stack development and machine learning.</li></ul></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="journey__col" id="achievements">
+      <p class="section-tag">// Achievements &amp; certifications</p>
+      <h2 class="display display--lg">Highlights<span class="dot">.</span></h2>
+      <div class="ach-list">
+        <button class="ach-card" type="button" data-credential="iqoo" data-reveal="up" aria-haspopup="dialog"><span class="ico"><i class="bi bi-trophy"></i></span><span class="ach-card__text"><span class="cat">HACKATHON</span><strong>iQOO Hackathon 2026</strong><span class="sub">Team Lead — team Delulu</span></span><i class="bi bi-arrow-right" aria-hidden="true"></i></button>
+        <button class="ach-card" type="button" data-credential="sih" data-reveal="up" data-delay="1" aria-haspopup="dialog"><span class="ico"><i class="bi bi-flag"></i></span><span class="ach-card__text"><span class="cat">COMPETITION</span><strong>Smart India Hackathon 2026</strong><span class="sub">Selected problem statement — in progress</span></span><i class="bi bi-arrow-right" aria-hidden="true"></i></button>
+        <button class="ach-card" type="button" data-credential="projects" data-reveal="up" data-delay="2" aria-haspopup="dialog"><span class="ico"><i class="bi bi-boxes"></i></span><span class="ach-card__text"><span class="cat">PROJECT MILESTONE</span><strong>4 projects across 4 domains</strong><span class="sub">Web, systems, machine learning and data analytics</span></span><i class="bi bi-arrow-right" aria-hidden="true"></i></button>
+        <button class="ach-card" type="button" data-credential="internship" data-reveal="up" data-delay="3" aria-haspopup="dialog"><span class="ico"><i class="bi bi-code-square"></i></span><span class="ach-card__text"><span class="cat">INTERNSHIP</span><strong>Full Stack Development (MERN)</strong><span class="sub">SmartBridge &amp; AICTE · 2026</span></span><i class="bi bi-arrow-right" aria-hidden="true"></i></button>
+      </div>
+      <div class="certs">
+        <h3>CERTIFICATION &amp; SOURCES</h3>
+        <button class="cert cert-trigger" type="button" data-credential="internship" aria-haspopup="dialog">
+          <span><b>Full Stack Development (MERN)</b><span class="meta">SmartBridge &amp; AICTE · 2026</span></span>
+          <span class="cert__action">VIEW DETAILS <i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+        </button>
+        <a class="cert cert-source" href="https://www.linkedin.com/in/agirishati-sai-teja-38a89334b" target="_blank" rel="noopener">
+          <span><b>LinkedIn profile</b><span class="meta">Profile and latest credentials</span></span>
+          <span class="cert__action">OPEN SOURCE <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="metrics" aria-label="Quick facts">
+    <div class="metric"><span class="metric__num"><span data-count="4" data-pad="2">00</span></span><span class="metric__lbl">Projects</span></div>
+    <div class="metric"><span class="metric__num"><span data-count="10">0</span><span class="plus">+</span></span><span class="metric__lbl">Technologies</span></div>
+    <div class="metric"><span class="metric__num"><span data-count="1" data-pad="2">00</span></span><span class="metric__lbl">Internship</span></div>
+    <div class="metric"><span class="metric__num"><span data-count="2" data-pad="2">00</span></span><span class="metric__lbl">Hackathons</span></div>
+  </section>
+
+  <section class="work-cta" aria-labelledby="wcta">
+    <h2 class="label" id="wcta" style="font-size:1rem">WANT TO SEE THE PROJECTS IN DETAIL?</h2>
+    <a class="btn-sharp magnetic" href="#projects">Explore projects <span class="arr" style="transform:none">↓</span></a>
+  </section>
+</main>
+
+<!-- Bootstrap modal: project case study (filled by js/projects.js) -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="projectModalTitle">Project</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="projectModalBody"></div>
+      <div class="modal-footer" id="projectModalFoot"></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="credentialModal" tabindex="-1" aria-labelledby="credentialModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content credential-modal">
+      <div class="modal-header">
+        <span class="credential-modal__icon"><i class="bi bi-award" aria-hidden="true"></i></span>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="section-tag">Achievement / credential</p>
+        <h2 class="modal-title" id="credentialModalTitle"></h2>
+        <div id="credentialModalBody"></div>
+      </div>
+      <div class="modal-footer">
+        <a class="btn-sharp btn-sharp--dark" href="https://www.linkedin.com/in/agirishati-sai-teja-38a89334b" target="_blank" rel="noopener">View LinkedIn <span class="arr">↗</span></a>
+        <span class="credential-modal__note">LinkedIn profile provided as the public source.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <p class="display display--lg" aria-label="Sai Teja">SAI<br>TEJA<span class="dot">.</span></p>
+    <ul class="footer-roles">
+      <li>DEVELOPER</li><li>AI ENTHUSIAST</li><li>DATA EXPLORER</li>
+    </ul>
+    <nav aria-label="Footer">
+      <ul class="footer-links flex-column flex-sm-row">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="work.html">WORK</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="https://github.com/Tejaak" target="_blank" rel="noopener">GITHUB</a></li>
+        <li><a href="https://www.linkedin.com/in/agirishati-sai-teja-38a89334b" target="_blank" rel="noopener">LINKEDIN</a></li>
+        <li><a href="mailto:sai.teja@mahindrauniversity.edu.in">EMAIL</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Sai Teja</span>
+    <span>&lt;/&gt; Built with HTML • CSS • JavaScript</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/projects.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+/* ==========================================================
+   SAI TEJA — PORTFOLIO · responsive.css
+   Layouts are rebuilt per breakpoint, not just shrunk.
+   Laptop ≤1200 · Tablet ≤992 / ≤768 · Mobile ≤576
+   ========================================================== */
+
+/* ---------- Laptop ---------- */
+@media (max-width: 1200px) {
+  .skills__groups { grid-template-columns: repeat(2, 1fr); }
+  .skill-group:nth-child(2) { border-right: 0; }
+  .skill-group:nth-child(-n+2) { border-bottom: var(--line); }
+  .skills { grid-template-columns: 1fr; }
+  .skills__title { border-right: 0; border-bottom: var(--line); }
+  .proj-grid--3 { grid-template-columns: repeat(2, 1fr); }
+  .avail-pill { display: none; }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 992px) {
+  .hero { grid-template-columns: 1fr; min-height: 0; }
+  .hero__text { border-right: 0; border-bottom: var(--line); }
+  .hero__photo { min-height: 480px; }
+  .about { grid-template-columns: 1fr; }
+  .about__main { border-right: 0; border-bottom: var(--line); }
+  .beyond { grid-template-columns: 1fr; }
+  .beyond__title { border-right: 0; border-bottom: 1px solid #333; }
+  .journey { grid-template-columns: 1fr; }
+  .journey__col + .journey__col { border-left: 0; border-top: var(--line); }
+  .contact-hero, .contact-body, .avail-final { grid-template-columns: 1fr; }
+  .contact-hero__text, .contact-form-wrap, .avail { border-right: 0; border-bottom: var(--line); }
+  .cta-strip { grid-template-columns: 1fr; }
+  .contact-hero__art { border-left: 0; border-top: 2px solid var(--black); }
+}
+
+/* ---------- Small tablet: switch to the mobile header ---------- */
+@media (max-width: 768px) {
+  :root { --header-h: 64px; }
+  .nav-main { display: none; }               /* links move into the full-screen menu */
+  .site-header { justify-content: space-between; }
+  .brand { border-right: 0; padding: 0 16px; flex: 1; }
+  .brand small { display: none; }
+  .menu-btn { padding: 0 20px; }
+  .menu-btn__text { display: none; }
+
+  .proj-grid, .proj-grid--3 { grid-template-columns: 1fr; }
+  .proj-card { min-height: 300px; border-right: 0; }
+  .beyond__tiles { grid-template-columns: repeat(2, 1fr); }
+  .tile-b:nth-child(2) { border-right: 0; }
+  .tile-b:nth-child(-n+2) { border-bottom: 1px solid #333; }
+  .tile-b p { opacity: 1; max-height: none; }   /* no hover on touch: show text */
+  .metrics { grid-template-columns: repeat(2, 1fr); }
+  .metric:nth-child(2) { border-right: 0; }
+  .metric:nth-child(-n+2) { border-bottom: 1px solid #333; }
+  .work-hero { grid-template-columns: 1fr; }
+  .work-hero .anchors { border-left: 0; padding-left: 0; flex-direction: row; flex-wrap: wrap; gap: 8px 20px; }
+  .skills__groups { grid-template-columns: 1fr; }
+  .skill-group { border-right: 0; border-bottom: var(--line); }
+  .skill-group:last-child { border-bottom: 0; }
+  .skill-tile .txt small { max-height: 48px; opacity: 1; }
+  .case-grid { grid-template-columns: 1fr; }
+  .case-cell:nth-child(odd) { border-right: 0; }
+  .proj-card__meta { opacity: 1; transform: none; }
+  .footer-roles { border-left: 0; padding-left: 0; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 576px) {
+  .pad, .section-head { padding-left: 16px; padding-right: 16px; }
+  .hero__text { padding: 22px 16px; }
+  .hero__cta .btn-sharp { flex: 1 1 100%; }          /* full-width, touch-friendly */
+  .hero__photo { min-height: 400px; }
+  .about__main, .background, .journey__col, .contact-form-wrap, .direct, .avail, .final-cta { padding: 24px 16px; }
+  .filters { padding: 16px; gap: 8px; }
+  .filter-btn { flex: 1 1 calc(33% - 8px); justify-content: center; padding: 8px 10px; }
+  .proj-card { padding: 20px 16px; }
+  .proj-card__img { width: 50%; }
+  .tags { max-width: 48%; }
+  .ach-card { grid-template-columns: 40px 1fr; }
+  .ach-card > i.bi-arrow-right { display: none; }
+  .ach-card .ico { width: 40px; height: 40px; }
+  .direct-item { grid-template-columns: 44px 1fr auto; gap: 12px; }
+  .direct-item .ico { width: 44px; height: 44px; }
+  .cta-strip { padding: 32px 16px; }
+  .cta-strip .actions .btn-sharp { width: 100%; }
+  .footer-bottom { flex-direction: column; }
+  .beyond__tiles .tile-b { min-height: 170px; padding: 20px 14px; }
+  .splash__bar .pct { display: none; }
+}
+
+/* ---------- Large screens: keep the editorial grid from stretching forever ---------- */
+@media (min-width: 1600px) {
+  body { font-size: 1.05rem; }
+  .hero { min-height: 780px; }
+}
+
+/* ---------- Print: plain, readable ---------- */
+@media print {
+  .site-header, .menu-overlay, .splash, .cursor-ring, .cursor-dot, .page-transition { display: none !important; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+}
